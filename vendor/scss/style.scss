@@ -68,12 +68,7 @@ ul {
         justify-content: center;
         padding: 60px 32px;
         position: relative;
-        &:hover {
-            &::before,
-            &::after {
-                transform: scale(1, 1);
-            }
-        }
+        margin-bottom: 3rem;
         &::before,
         &::after {
             content: '';
@@ -91,12 +86,14 @@ ul {
             border-top: 8px solid black;
             border-bottom: 8px solid black;
             transform-origin: bottom center;
+            transform: scale(0, 1);
         }
         &::after {
             transform-origin: bottom center;
             border-left: 8px solid black;
             border-right: 8px solid black;
             transform-origin: left center;
+            transform: scale(1, 1);
         }
         &--title {
             margin: 2rem 0px;
@@ -217,5 +214,12 @@ ul {
     }
     50% {
         transform: rotate(10deg) translateX(30px);
+    }
+}
+
+.footer {
+    &-box {
+        display: flex;
+        justify-content: space-between;
     }
 }
